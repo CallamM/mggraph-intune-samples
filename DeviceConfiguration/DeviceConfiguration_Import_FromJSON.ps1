@@ -21,7 +21,7 @@ https://learn.microsoft.com/powershell/microsoftgraph/app-only?view=graph-powers
 ####################################################
 $FileName = Read-Host -Prompt "Please specify a path to a JSON file to import data from e.g. C:\IntuneOutput\Policies\policy.json"
 
-Test-Json -Path $FileName
+Test-Path -Path $FileName
 
 If (Test-Path -Path $FileName -Type Leaf) {
     $ImportPath = $FileName
